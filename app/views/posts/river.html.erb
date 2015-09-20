@@ -1,0 +1,13 @@
+<p>Yo, this a blog.</p>
+
+<% @posts.each do |post| %>
+  <h3><%= post.title %></h3>
+  <p><%= post.body %></p>
+  <ul>
+  <% post.tags.each do |tag| %>
+    <li>
+      <%= tag.name %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
